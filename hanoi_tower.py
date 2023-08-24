@@ -67,9 +67,10 @@ def solve_hanoi(n_disks: int, save_filename: str):
     saveHanoi(n_disks, save_filename)
     return
 
-user_n_disks = input("Hello there. To get a solution for your hanoi tower problem, please type in the number of disks you have: ")
-if  user_n_disks.isdigit() == False: 
-    user_n_disks = input("You have to put in an integer number: ")
-user_filename = input("How would you like to save your file? ")
+if __name__ == "__main__":
+    user_n_disks = input("Hello there. To get a solution for your hanoi tower problem, please type in the number of disks you have: ")
+    if  user_n_disks.isdigit() == False: 
+        user_n_disks = input("You have to put in an integer number: ")
+    user_filename = input("How would you like to save your file? ")
 
-solve_hanoi(int(user_n_disks), str(user_filename))
+    solve_hanoi(int(user_n_disks), str(user_filename))
