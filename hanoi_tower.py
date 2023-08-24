@@ -16,7 +16,7 @@ def hanoi_instructions(n_disks: int, source: str, spare: str, goal: str):
     
     instructions = []
     instructions.extend(hanoi_instructions(n_disks - 1, source, goal, spare))
-    instructions.append((source, goal))
+    instructions.extend((source, goal))
     instructions.extend(hanoi_instructions(n_disks - 1, spare, source, goal))
     
     return instructions
